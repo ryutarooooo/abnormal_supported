@@ -67,3 +67,11 @@ td {
 .break-word {
   word-break: break-word;
 }
+
+.alert-notice {
+  @extend .alert-info;
+}
+
+.alert-alert {
+  @extend .alert-danger;
+}
