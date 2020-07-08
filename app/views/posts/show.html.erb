@@ -8,6 +8,6 @@
     <h4><%= "異常内容:#{@post.content}" %></h4>
   </div>
   <div class="card-body">
-    <p class="card-text"><%= "異常処置内容:#{simple_format(h @post.fix_detail)}" %></p>
+    <p class="card-text"><%= simple_format(h "異常処置内容:#{ @post.fix_detail}")%></p>
   </div>
 </section>
