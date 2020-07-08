@@ -6,7 +6,7 @@ ja:
       post: メッセージ
     attributes:
       post:
-        place: 異常発生工程
+        place: 発生工程
         title: 異常名
         content: 異常内容
         fix_detail: 異常処置内容

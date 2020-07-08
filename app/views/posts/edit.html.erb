@@ -1,7 +1,7 @@
-<h1>編集</h1>
+<h1>異常修正ページ</h1>
 <%= form_with model: @post, local: true do |form| %>
   <div>
-    <%= form.label :place, "異常発生工程" %>
+    <%= form.label :place, "発生工程" %>
     <%= form.text_field :place %>
   </div>
   <div>
@@ -17,6 +17,15 @@
     <%= form.text_field :fix_detail %>
   </div>
   <div>
-    <%= form.submit "変更" %>
+    <%= form.submit "変更実施" %>
+  </div>
+<% end %>
+<% if @post.errors.any? %>
+  <div>
+    <ul>
+      <% @post.errors.full_messages.each do |msg| %>
+        <li><span style="color: red;"><%= msg %></span></li>
+      <% end %>
+    </ul>
   </div>
 <% end %>
