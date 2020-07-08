@@ -1,19 +1,19 @@
 <h1>新規登録</h1>
 <%= form_with model: @post, local: true do |form| %>
   <div>
-    <%= form.label :place, "異常発生工程" %>
+    <%= form.label :place %>
     <%= form.text_field :place %>
   </div>
   <div>
-    <%= form.label :title, "異常名" %>
+    <%= form.label :title %>
     <%= form.text_field :title %>
   </div>
   <div>
-    <%= form.label :content, "異常内容" %>
+    <%= form.label :content %>
     <%= form.text_field :content %>
   </div>
   <div>
-    <%= form.label :fix_detail, "異常処置方法" %>
+    <%= form.label :fix_detail %>
     <%= form.text_field :fix_detail %>
   </div>
   <div>
