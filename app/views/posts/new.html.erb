@@ -1,31 +1,23 @@
 <h1>異常登録</h1>
+<%= render "layouts/error_messages" %>
 <%= form_with model: @post, local: true do |form| %>
-  <div>
+  <div class="form-group">
     <%= form.label :place %>
-    <%= form.text_field :place %>
+    <%= form.text_field :place, class: "form-control" %>
   </div>
-  <div>
+  <div class="form-group">
     <%= form.label :title %>
-    <%= form.text_field :title %>
+    <%= form.text_field :title, class: "form-control" %>
   </div>
-  <div>
+  <div class="form-group">
     <%= form.label :content %>
-    <%= form.text_field :content %>
+    <%= form.text_field :content, class: "form-control"  %>
   </div>
-  <div>
+  <div class="form-group">
     <%= form.label :fix_detail %>
-    <%= form.text_field :fix_detail %>
+    <%= form.text_area :fix_detail, class: "form-control", rows: 7 %>
   </div>
   <div>
-    <%= form.submit "登録実施" %>
-  </div>
-<% end %>
-<% if @post.errors.any? %>
-  <div>
-    <ul>
-      <% @post.errors.full_messages.each do |msg| %>
-        <li><span style="color: red;"><%= msg %></span></li>
-      <% end %>
-    </ul>
+    <%= form.submit button_value="登録実施", class: "btn btn-primary btn-block" %>
   </div>
 <% end %>

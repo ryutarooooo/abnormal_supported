@@ -1,31 +1,23 @@
-<h1>異常修正ページ</h1>
+<h1><%= "異常発生変更" %></h1>
+<%= render "layouts/error_messages" %>
 <%= form_with model: @post, local: true do |form| %>
-  <div>
-    <%= form.label :place, "発生工程" %>
-    <%= form.text_field :place %>
+  <div class="form-group">
+    <%= form.label :place %>
+    <%= form.text_field :place, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= form.label :title %>
+    <%= form.text_field :title, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= form.label :content %>
+    <%= form.text_field :content, class: "form-control"  %>
+  </div>
+  <div class="form-group">
+    <%= form.label :fix_detail %>
+    <%= form.text_area :fix_detail, class: "form-control", rows: 7 %>
   </div>
   <div>
-    <%= form.label :title, "異常名" %>
-    <%= form.text_field :title %>
-  </div>
-  <div>
-    <%= form.label :content, "異常内容" %>
-    <%= form.text_field :content %>
-  </div>
-  <div>
-    <%= form.label :fix_detail, "異常処置方法" %>
-    <%= form.text_field :fix_detail %>
-  </div>
-  <div>
-    <%= form.submit "変更実施" %>
-  </div>
-<% end %>
-<% if @post.errors.any? %>
-  <div>
-    <ul>
-      <% @post.errors.full_messages.each do |msg| %>
-        <li><span style="color: red;"><%= msg %></span></li>
-      <% end %>
-    </ul>
+    <%= form.submit button_value="変更実施", class: "btn btn-primary btn-block" %>
   </div>
 <% end %>
