@@ -1,1 +1,25 @@
-<h1>異常発生項目確認</h1>
+<h1>投稿一覧</h1>
+<table>
+  <thead>
+    <tr>
+      <th scope="col">No.</th>
+      <th scope="col">異常発生場所</th>
+      <th scope="col">異常名</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @posts.each.with_index(1) do |post, i| %>
+      <tr>
+        <th scope="row"><%= i %></th>
+        <td><%= post.place %></td>
+        <td><%= post.title %></td>
+        <td>
+          <%= link_to "詳細", post %>
+          <%= link_to "編集", edit_post_path(post) %>
+          <%= link_to "削除", post, method: :delete, data: { confirm: "削除しますか?"}%>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
