@@ -6,6 +6,8 @@
     <h4><%= "異常名:#{@post.title}" %></h4>
     <hr>
     <h4><%= "異常内容:#{@post.content}" %></h4>
+    <hr>
+    <h4><%= "異常登録日時:#{ l @post.created_at}" %></h4>
   </div>
   <div class="card-body">
     <p class="card-text"><%= simple_format(h "異常処置内容:#{ @post.fix_detail}")%></p>

@@ -214,3 +214,8 @@ ja:
       long: "%Y/%m/%d %H:%M"
       short: "%m/%d %H:%M"
     pm: 午後
+
+    ja:
+  time:
+    formats:
+      default: "%Y/%-m/%-d %-H:%-M:%-S"
