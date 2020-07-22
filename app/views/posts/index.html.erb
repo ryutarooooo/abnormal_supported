@@ -1,4 +1,8 @@
 <h1 class="text-center">異常発生一覧</h1>
+<form class="mb-3 search-form mx-auto">
+  <i class="fa fa-search search-icon" title="Search"></i>
+  <input type="text" id="search-text" class="form-control search-text" placeholder="異常を探す" aria-label="Username" aria-describedby="search-form">
+</form>
 <table class="table table-bordered table-striped mt-4">
   <thead class="table-primary">
     <tr>
@@ -12,7 +16,7 @@
     <% @posts.each.with_index(1) do |post, i| %>
       <tr>
         <th scope="row" class="text-right"><%= i %></th>
-        <td class="break-word"><%= post.place %></td>
+        <td class="break-word abnormal-place"><%= post.place %></td>
         <td class="break-word"><%= post.title %></td>
         <td class="text-nowrap">
           <%= link_to post, class: "btn btn-primary" do %>
