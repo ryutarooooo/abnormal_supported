@@ -23,4 +23,8 @@ Ruby on Railsで制作したアプリとなります
 4.検索機能にて確認したい異常箇所のみ表示
 
 ## インストール
-
+```
+$ git clone https://github.com/ryutarooooo/abnormal_supported.git
+$ cd abnormal_supported.git
+$ bundle insatall
+```
