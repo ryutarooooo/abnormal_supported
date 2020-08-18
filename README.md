@@ -28,3 +28,13 @@ $ git clone https://github.com/ryutarooooo/abnormal_supported.git
 $ cd abnormal_supported.git
 $ bundle insatall
 ```
+
+## 作者
+
+<a href="https://twitter.com/ryutaro_nagata" class="twitter" target="_blank">永田隆太朗Twitter</a>
+
+## ライセンス
+
+This project is licensed free.<br>
+ご自由にご利用ください　
+
