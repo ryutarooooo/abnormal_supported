@@ -25,7 +25,7 @@ Ruby on Railsで制作したアプリとなります
 ## インストール
 ```
 $ git clone https://github.com/ryutarooooo/abnormal_supported.git
-$ cd abnormal_supported.git
+$ cd abnormal_supported
 $ bundle insatall
 ```
 
